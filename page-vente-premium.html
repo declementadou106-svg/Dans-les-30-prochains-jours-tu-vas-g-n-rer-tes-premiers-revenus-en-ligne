@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les 7 Façons de Gagner de l'Argent sur son Téléphone en Afrique</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #F0D080;
+    --gold-dark: #8A6A1E;
+    --green: #0A3D2B;
+    --green-mid: #145C3E;
+    --green-light: #1E8A58;
+    --cream: #FAF5E9;
+    --cream-dark: #F0E8D0;
+    --white: #FFFFFF;
+    --dark: #0D0D0D;
+    --gray: #5A5A5A;
+    --red-urgent: #C0392B;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  /* ── URGENCY BAR ── */
+  .urgency-bar {
+    background: var(--red-urgent);
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    animation: pulse-bar 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-bar {
+    0%, 100% { background: var(--red-urgent); }
+    50% { background: #a93226; }
+  }
+
+  .urgency-bar span { color: #FFE566; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.15) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 10% 80%, rgba(20,92,62,0.4) 0%, transparent 60%),
+      linear-gradient(160deg, #0A0E0C 0%, #0D1A12 40%, #050D08 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* African pattern border top */
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: repeating-linear-gradient(90deg,
+      var(--gold) 0px, var(--gold) 20px,
+      var(--green-light) 20px, var(--green-light) 40px,
+      var(--gold-dark) 40px, var(--gold-dark) 60px);
+  }
+
+  .badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-dark));
+    color: var(--dark);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    border-radius: 2px;
+    margin-bottom: 32px;
+    animation: fadeDown 0.6s ease both;
+  }
+
+  .hero-eyebrow {
+    font-size: clamp(13px, 2vw, 15px);
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeDown 0.7s ease 0.1s both;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 7vw, 80px);
+    font-weight: 900;
+    line-height: 1.05;
+    text-align: center;
+    max-width: 900px;
+    animation: fadeDown 0.8s ease 0.2s both;
+  }
+
+  .hero-title .highlight {
+    color: var(--gold);
+    font-style: italic;
+    position: relative;
+    display: inline-block;
+  }
+
+  .hero-title .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { opacity: 0.4; transform: scaleX(0.8); }
+    50% { opacity: 1; transform: scaleX(1); }
+  }
+
+  .hero-subtitle {
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: rgba(250,245,233,0.7);
+    text-align: center;
+    max-width: 620px;
+    margin: 24px auto 0;
+    line-height: 1.6;
+    font-weight: 300;
+    animation: fadeDown 0.9s ease 0.3s both;
+  }
+
+  .hero-proof {
+    display: flex;
+    gap: 40px;
+    margin-top: 48px;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeDown 1s ease 0.4s both;
+  }
+
+  .proof-item {
+    text-align: center;
+  }
+
+  .proof-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    color: var(--gold);
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+
+  .proof-label {
+    font-size: 12px;
+    color: rgba(250,245,233,0.5);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .proof-divider {
+    width: 1px;
+    background: rgba(201,168,76,0.3);
+    align-self: stretch;
+  }
+
+  /* ── PROMISE SECTION ── */
+  .promise {
+    background: linear-gradient(135deg, var(--green), #0C2E1F);
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .promise::before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 400px;
+    color: rgba(201,168,76,0.04);
+    position: absolute;
+    top: -80px;
+    left: -40px;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before, .section-label::after {
+    content: '';
+    height: 1px;
+    width: 40px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+
+  .promise-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 4vw, 40px);
+    line-height: 1.3;
+    font-style: italic;
+    color: var(--cream);
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 32px;
+  }
+
+  .promise-text strong {
+    color: var(--gold);
+    font-style: normal;
+    font-weight: 900;
+  }
+
+  .guarantee-box {
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 4px;
+    padding: 28px 36px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .guarantee-box .g-icon { font-size: 36px; margin-bottom: 12px; }
+  .guarantee-box .g-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .guarantee-box p { font-size: 14px; color: rgba(250,245,233,0.7); line-height: 1.6; }
+
+  /* ── WHAT YOU GET ── */
+  .offer {
+    background: var(--dark);
+    padding: 80px 20px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .section-title .gold { color: var(--gold); }
+
+  .section-desc {
+    text-align: center;
+    color: rgba(250,245,233,0.6);
+    font-size: 16px;
+    max-width: 540px;
+    margin: 0 auto 60px;
+    line-height: 1.7;
+  }
+
+  /* Main product card */
+  .product-card {
+    background: linear-gradient(135deg, #0F1F16 0%, #132018 50%, #0A1A10 100%);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 8px;
+    padding: 48px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light), var(--gold));
+  }
+
+  .product-tag {
+    display: inline-block;
+    background: var(--green-light);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+
+  .product-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 3.5vw, 32px);
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--cream);
+  }
+
+  .product-desc {
+    color: rgba(250,245,233,0.65);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+    max-width: 580px;
+  }
+
+  .chapter-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .chapter-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 13px;
+    color: rgba(250,245,233,0.8);
+    line-height: 1.5;
+  }
+
+  .chapter-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  .product-value {
+    font-size: 13px;
+    color: rgba(250,245,233,0.4);
+    text-decoration: line-through;
+  }
+
+  .product-value span {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  /* Bonus cards */
+  .bonuses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .bonus-card {
+    background: #0D0D0D;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 6px;
+    padding: 28px 24px;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    cursor: default;
+  }
+
+  .bonus-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201,168,76,0.3);
+  }
+
+  .bonus-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    color: rgba(201,168,76,0.12);
+    line-height: 1;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+  }
+
+  .bonus-badge {
+    display: inline-block;
+    background: rgba(201,168,76,0.1);
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 2px;
+    margin-bottom: 14px;
+  }
+
+  .bonus-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .bonus-desc {
+    font-size: 13px;
+    color: rgba(250,245,233,0.55);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .bonus-value {
+    font-size: 12px;
+    color: rgba(250,245,233,0.35);
+  }
+
+  .bonus-value strong { color: var(--gold); font-size: 15px; }
+
+  /* ── VALUE STACK ── */
+  .value-stack {
+    background: linear-gradient(135deg, #0F1F16, #0A1A10);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 8px;
+    padding: 40px 48px;
+    margin-bottom: 16px;
+  }
+
+  .stack-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .stack-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    gap: 16px;
+  }
+
+  .stack-row:last-child { border-bottom: none; }
+
+  .stack-item-name {
+    font-size: 14px;
+    color: rgba(250,245,233,0.8);
+    flex: 1;
+  }
+
+  .stack-item-name strong { color: var(--cream); font-weight: 600; }
+
+  .stack-price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    color: rgba(250,245,233,0.4);
+    text-decoration: line-through;
+    white-space: nowrap;
+  }
+
+  .stack-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 2px solid rgba(201,168,76,0.3);
+  }
+
+  .total-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(250,245,233,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .total-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: rgba(250,245,233,0.4);
+    text-decoration: line-through;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── CTA SECTION ── */
+  .cta-section {
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 100%, rgba(201,168,76,0.12) 0%, transparent 70%),
+      linear-gradient(180deg, var(--dark) 0%, #060E09 100%);
+    padding: 80px 20px;
+  }
+
+  .price-display {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .was-price {
+    font-size: 18px;
+    color: rgba(250,245,233,0.35);
+    text-decoration: line-through;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .now-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(72px, 12vw, 110px);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold-light), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .price-currency {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: var(--gold);
+    vertical-align: super;
+  }
+
+  .price-note {
+    font-size: 13px;
+    color: rgba(250,245,233,0.4);
+    margin-top: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .cta-btn {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto 16px;
+    padding: 22px 40px;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 8px 40px rgba(201,168,76,0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 50px rgba(201,168,76,0.45);
+  }
+
+  .cta-btn:hover::before { transform: translateX(100%); }
+
+  .cta-secondary {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(250,245,233,0.35);
+    letter-spacing: 0.1em;
+    margin-bottom: 40px;
+  }
+
+  .payment-methods {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .pay-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(250,245,233,0.6);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials {
+    background: #080808;
+    padding: 80px 20px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 48px;
+  }
+
+  .testi-card {
+    background: #0F0F0F;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 6px;
+    padding: 28px;
+    position: relative;
+  }
+
+  .testi-stars {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+
+  .testi-text {
+    font-size: 14px;
+    color: rgba(250,245,233,0.7);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .testi-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .testi-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark);
+    flex-shrink: 0;
+  }
+
+  .testi-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--cream);
+  }
+
+  .testi-location {
+    font-size: 12px;
+    color: rgba(250,245,233,0.4);
+    margin-top: 2px;
+  }
+
+  /* ── FOR WHO ── */
+  .for-who {
+    background: linear-gradient(135deg, #0A1A10, #060E09);
+    padding: 80px 20px;
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 600px) {
+    .columns { grid-template-columns: 1fr; }
+    .hero-proof { gap: 24px; }
+    .proof-divider { display: none; }
+    .value-stack { padding: 28px 20px; }
+    .product-card { padding: 28px 20px; }
+    .chapter-list { grid-template-columns: 1fr; }
+  }
+
+  .col-box {
+    border-radius: 6px;
+    padding: 28px;
+  }
+
+  .col-yes {
+    background: rgba(20,92,62,0.2);
+    border: 1px solid rgba(30,138,88,0.2);
+  }
+
+  .col-no {
+    background: rgba(192,57,43,0.08);
+    border: 1px solid rgba(192,57,43,0.15);
+  }
+
+  .col-head {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .col-yes .col-head { color: var(--green-light); }
+  .col-no .col-head { color: #e74c3c; }
+
+  .col-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: rgba(250,245,233,0.7);
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  .col-item .icon { flex-shrink: 0; font-size: 14px; margin-top: 1px; }
+
+  /* ── FAQ ── */
+  .faq {
+    background: var(--dark);
+    padding: 80px 20px;
+  }
+
+  .faq-list {
+    max-width: 680px;
+    margin: 48px auto 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 20px 0;
+  }
+
+  .faq-q {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--cream);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    user-select: none;
+  }
+
+  .faq-q::after {
+    content: '+';
+    font-size: 22px;
+    color: var(--gold);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item.open .faq-q::after { transform: rotate(45deg); }
+
+  .faq-a {
+    font-size: 14px;
+    color: rgba(250,245,233,0.6);
+    line-height: 1.7;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+
+  .faq-item.open .faq-a {
+    max-height: 300px;
+    padding-top: 14px;
+  }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 50%, rgba(20,92,62,0.35) 0%, transparent 70%),
+      linear-gradient(135deg, #060E09, #0A1A10, #060E09);
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .final-cta::before {
+    content: '💰';
+    position: absolute;
+    font-size: 300px;
+    opacity: 0.03;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .final-cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 900;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.2;
+  }
+
+  .final-cta-sub {
+    font-size: 16px;
+    color: rgba(250,245,233,0.6);
+    max-width: 480px;
+    margin: 0 auto 48px;
+    line-height: 1.6;
+  }
+
+  /* countdown */
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+  .cd-block {
+    text-align: center;
+    min-width: 70px;
+  }
+
+  .cd-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    line-height: 1;
+    color: var(--gold);
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 4px;
+    padding: 8px 16px;
+    min-width: 70px;
+    display: block;
+  }
+
+  .cd-label {
+    font-size: 10px;
+    color: rgba(250,245,233,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-top: 6px;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── AFRICAN DIVIDER ── */
+  .african-divider {
+    height: 8px;
+    background: repeating-linear-gradient(90deg,
+      var(--green) 0px, var(--green) 20px,
+      var(--gold) 20px, var(--gold) 30px,
+      var(--green-light) 30px, var(--green-light) 50px,
+      var(--gold-dark) 50px, var(--gold-dark) 60px);
+    opacity: 0.6;
+  }
+</style>
+</head>
+<body>
+
+<!-- URGENCY BAR -->
+<div class="urgency-bar">
+  ⏳ OFFRE DE LANCEMENT — <span>Prix spécial expire dans</span> <span id="bar-timer">23:47:12</span> · Seulement <span>47 exemplaires</span> restants à ce tarif
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">🌍 Édition Premium 2026 — Afrique Francophone</div>
+  <p class="hero-eyebrow">Le guide qui change des vies depuis Dakar jusqu'à Douala</p>
+  <h1 class="hero-title">
+    Génère tes premiers<br>
+    <span class="highlight">100 000 FCFA</span><br>
+    depuis ton téléphone
+  </h1>
+  <p class="hero-subtitle">
+    La méthode complète, concrète et éprouvée par des centaines d'Africains — sans diplôme, sans capital, sans connexion.
+    <strong style="color: var(--gold)">Juste ton smartphone.</strong>
+  </p>
+
+  <div class="hero-proof">
+    <div class="proof-item">
+      <div class="proof-num">7</div>
+      <div class="proof-label">Méthodes prouvées</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <div class="proof-num">4</div>
+      <div class="proof-label">Bonus exclusifs</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <div class="proof-num">30J</div>
+      <div class="proof-label">Garantie satisfait</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <div class="proof-num">0</div>
+      <div class="proof-label">FCFA de capital requis</div>
+    </div>
+  </div>
+</section>
+
+<div class="african-divider"></div>
+
+<!-- PROMISE -->
+<section class="promise">
+  <div class="container">
+    <div class="section-label" style="justify-content:center">La promesse</div>
+    <p class="promise-text">
+      "Dans les 30 prochains jours, tu vas générer <strong>tes premiers revenus en ligne</strong> — ou je te rembourse intégralement, sans question."
+    </p>
+    <div class="guarantee-box">
+      <div class="g-icon">🛡️</div>
+      <div class="g-title">Garantie 30 Jours — Satisfait ou Remboursé</div>
+      <p>Si après avoir appliqué les méthodes de ce guide pendant 30 jours tu n'as pas généré le moindre franc, envoie-nous un message et nous te remboursons 100% du prix payé. Aucune condition. Aucune question.</p>
+    </div>
+  </div>
+</section>
+
+<div class="african-divider"></div>
+
+<!-- OFFER CONTENTS -->
+<section class="offer">
+  <div class="container">
+    <div class="section-label" style="justify-content:center">Ce que tu reçois aujourd'hui</div>
+    <h2 class="section-title">Une offre <span class="gold">complète</span>,<br>construite pour te faire gagner</h2>
+    <p class="section-desc">Pas juste un ebook. Un véritable système complet pour passer de zéro à tes premiers revenus mobiles.</p>
+
+    <!-- MAIN PRODUCT -->
+    <div class="product-card reveal">
+      <div class="product-tag">✦ Produit Principal</div>
+      <div class="product-name">Les 7 Façons de Gagner de l'Argent sur son Téléphone en Afrique</div>
+      <p class="product-desc">Le guide le plus complet jamais écrit sur les revenus mobiles en Afrique francophone. 40+ pages de stratégies concrètes, exemples réels, plans d'action et outils testés par de vraies personnes à Dakar, Abidjan, Douala, Bamako et Conakry.</p>
+      <div class="chapter-list">
+        <div class="chapter-item"><div class="chapter-icon">1</div><span>Vendre sur WhatsApp Business — La boutique dans ta poche</span></div>
+        <div class="chapter-item"><div class="chapter-icon">2</div><span>Devenir créateur de contenu local — Monétise ta voix</span></div>
+        <div class="chapter-item"><div class="chapter-icon">3</div><span>Le freelance digital — Clients du monde entier</span></div>
+        <div class="chapter-item"><div class="chapter-icon">4</div><span>L'affiliation et la revente — Vends sans créer</span></div>
+        <div class="chapter-item"><div class="chapter-icon">5</div><span>Les micro-services — Petites tâches, gros revenus</span></div>
+        <div class="chapter-item"><div class="chapter-icon">6</div><span>Investissement mobile — Fais travailler ton argent</span></div>
+        <div class="chapter-item"><div class="chapter-icon">7</div><span>Tes propres produits numériques — Revenus passifs réels</span></div>
+      </div>
+      <div class="product-value">Valeur réelle : <span>25 000 FCFA</span></div>
+    </div>
+
+    <!-- BONUSES -->
+    <div class="section-label" style="margin: 48px 0 24px">Bonus exclusifs inclus</div>
+    <div class="bonuses-grid">
+
+      <div class="bonus-card reveal">
+        <div class="bonus-num">01</div>
+        <div class="bonus-badge">Bonus #1</div>
+        <div class="bonus-title">🗓️ Le Plan 30 Jours "Premier Revenu"</div>
+        <p class="bonus-desc">Un calendrier jour par jour pour les 4 premières semaines. Chaque jour : une action précise, un objectif chiffré, un outil à utiliser. Zéro hésitation. Tu sais exactement quoi faire chaque matin.</p>
+        <div class="bonus-value">Valeur : <strong>8 000 FCFA</strong> — Offert</div>
+      </div>
+
+      <div class="bonus-card reveal">
+        <div class="bonus-num">02</div>
+        <div class="bonus-badge">Bonus #2</div>
+        <div class="bonus-title">📱 Pack 50 Messages WhatsApp qui Vendent</div>
+        <p class="bonus-desc">50 scripts de messages prêts à copier-coller pour vendre sur WhatsApp, relancer un client, présenter un produit, annoncer une promo ou gérer les objections. Plus jamais la page blanche.</p>
+        <div class="bonus-value">Valeur : <strong>12 000 FCFA</strong> — Offert</div>
+      </div>
+
+      <div class="bonus-card reveal">
+        <div class="bonus-num">03</div>
+        <div class="bonus-badge">Bonus #3</div>
+        <div class="bonus-title">🎨 Kit Canva — 20 Templates Visuels Pro</div>
+        <p class="bonus-desc">20 modèles Canva personnalisables pour créer des visuels professionnels pour tes produits, tes promotions et tes réseaux sociaux. Modifiables en 5 minutes sur ton téléphone.</p>
+        <div class="bonus-value">Valeur : <strong>15 000 FCFA</strong> — Offert</div>
+      </div>
+
+      <div class="bonus-card reveal">
+        <div class="bonus-num">04</div>
+        <div class="bonus-badge">Bonus #4 · Exclusif</div>
+        <div class="bonus-title">🔒 Guide Anti-Arnaques : Reconnaître les Fausses Opportunités</div>
+        <p class="bonus-desc">En Afrique, les arnaques "gagner de l'argent en ligne" sont partout. Ce guide te donne les 12 signaux d'alarme pour identifier une arnaque en 2 minutes et protéger ton argent et ta réputation.</p>
+        <div class="bonus-value">Valeur : <strong>6 000 FCFA</strong> — Offert</div>
+      </div>
+
+    </div>
+
+    <!-- VALUE STACK -->
+    <div class="value-stack reveal">
+      <div class="stack-title">Ce que tu reçois — Récapitulatif</div>
+      <div class="stack-row">
+        <div class="stack-item-name"><strong>Guide Principal :</strong> Les 7 Façons (40+ pages)</div>
+        <div class="stack-price">25 000 FCFA</div>
+      </div>
+      <div class="stack-row">
+        <div class="stack-item-name"><strong>Bonus #1 :</strong> Plan 30 Jours "Premier Revenu"</div>
+        <div class="stack-price">8 000 FCFA</div>
+      </div>
+      <div class="stack-row">
+        <div class="stack-item-name"><strong>Bonus #2 :</strong> 50 Messages WhatsApp qui Vendent</div>
+        <div class="stack-price">12 000 FCFA</div>
+      </div>
+      <div class="stack-row">
+        <div class="stack-item-name"><strong>Bonus #3 :</strong> Kit Canva 20 Templates Pro</div>
+        <div class="stack-price">15 000 FCFA</div>
+      </div>
+      <div class="stack-row">
+        <div class="stack-item-name"><strong>Bonus #4 :</strong> Guide Anti-Arnaques</div>
+        <div class="stack-price">6 000 FCFA</div>
+      </div>
+      <div class="stack-total">
+        <div class="total-label">Valeur totale</div>
+        <div class="total-value">66 000 FCFA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA PRINCIPAL -->
+<section class="cta-section">
+  <div class="container" style="text-align:center">
+    <div class="section-label" style="justify-content:center; margin-bottom: 32px">Rejoins maintenant</div>
+
+    <div class="price-display">
+      <div class="was-price">Valeur totale : 66 000 FCFA</div>
+      <div class="now-label">Prix de lancement aujourd'hui</div>
+      <div class="price">7 500 <span style="font-size:40px; color: var(--gold); background: none; -webkit-text-fill-color: var(--gold)">FCFA</span></div>
+      <div class="price-note">Paiement unique · Accès immédiat · PDF téléchargeable</div>
+    </div>
+
+    <a href="#" class="cta-btn" onclick="return false">
+      ⚡ OUI — Je veux accéder au pack complet pour 7 500 FCFA
+    </a>
+    <div class="cta-secondary">🔒 Paiement sécurisé · Accès instantané · Garantie 30 jours sans risque</div>
+
+    <div class="payment-methods">
+      <div class="pay-badge">📱 Wave</div>
+      <div class="pay-badge">🟠 Orange Money</div>
+      <div class="pay-badge">💛 MTN MoMo</div>
+      <div class="pay-badge">💳 Carte Visa/Mastercard</div>
+    </div>
+  </div>
+</section>
+
+<div class="african-divider"></div>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-label" style="justify-content:center">Ils ont déjà commencé</div>
+    <h2 class="section-title" style="text-align:center">Ce qu'ils disent <span class="gold">après l'avoir lu</span></h2>
+
+    <div class="testimonials-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"J'ai appliqué la méthode WhatsApp Business le soir même. En 3 semaines, j'avais vendu mes premiers produits pour 45 000 FCFA. Ce guide est concret, pas de blabla."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background: linear-gradient(135deg, #1E8A58, #0A3D2B)">A</div>
+          <div>
+            <div class="testi-name">Aminata K.</div>
+            <div class="testi-location">Abidjan, Côte d'Ivoire</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"J'étais sceptique. Maintenant je gère 3 pages Instagram de PME locales depuis mon téléphone. 180 000 FCFA ce mois-ci. La section freelance vaut 10 fois le prix du guide."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background: linear-gradient(135deg, #C9A84C, #8A6A1E)">S</div>
+          <div>
+            <div class="testi-name">Seydou B.</div>
+            <div class="testi-location">Dakar, Sénégal</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Le bonus Plan 30 Jours a tout changé pour moi. J'avais lu d'autres guides mais je ne savais pas par où commencer. Là, chaque jour j'ai une action précise. En semaine 2 j'avais mes premiers 12 000 FCFA."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background: linear-gradient(135deg, #8A6A1E, #C9A84C)">F</div>
+          <div>
+            <div class="testi-name">Fatimata O.</div>
+            <div class="testi-location">Bamako, Mali</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHO -->
+<section class="for-who">
+  <div class="container">
+    <div class="section-label" style="justify-content:center">Pour qui ?</div>
+    <h2 class="section-title" style="text-align:center; margin-bottom: 48px">Ce guide est <span class="gold">fait pour toi</span>…<br>ou pas</h2>
+    <div class="columns reveal">
+      <div class="col-box col-yes">
+        <div class="col-head">✅ Oui, pour toi si…</div>
+        <div class="col-item"><span class="icon">→</span><span>Tu veux des revenus complémentaires ou une activité principale</span></div>
+        <div class="col-item"><span class="icon">→</span><span>Tu as un smartphone et une connexion internet</span></div>
+        <div class="col-item"><span class="icon">→</span><span>Tu es prêt à consacrer 1 à 3h par jour pendant 30 jours</span></div>
+        <div class="col-item"><span class="icon">→</span><span>Tu pars de zéro, sans expérience ni capital</span></div>
+        <div class="col-item"><span class="icon">→</span><span>Tu es étudiant, salarié, mère de famille ou sans emploi</span></div>
+      </div>
+      <div class="col-box col-no">
+        <div class="col-head">❌ Pas pour toi si…</div>
+        <div class="col-item"><span class="icon">→</span><span>Tu cherches un moyen de t'enrichir sans rien faire</span></div>
+        <div class="col-item"><span class="icon">→</span><span>Tu n'es pas prêt à appliquer les conseils du guide</span></div>
+        <div class="col-item"><span class="icon">→</span><span>Tu attends un miracle financier en un clic</span></div>
+        <div class="col-item"><span class="icon">→</span><span>Tu n'as pas accès à un smartphone basique</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="section-label" style="justify-content:center">Questions fréquentes</div>
+    <h2 class="section-title" style="text-align:center">Tu as des <span class="gold">questions ?</span></h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-q">Combien de temps avant de voir des résultats ?</div>
+        <div class="faq-a">Certains lecteurs ont leurs premiers revenus en 3 à 7 jours en appliquant la méthode WhatsApp Business ou les micro-services. En moyenne, avec 2 heures de travail par jour, les premiers résultats arrivent en 2 à 3 semaines. Les revenus stables et réguliers prennent généralement 1 à 3 mois selon la méthode choisie.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Est-ce que j'ai besoin d'un ordinateur ?</div>
+        <div class="faq-a">Non. Le guide est conçu entièrement pour smartphone. Toutes les applications, plateformes et outils mentionnés fonctionnent sur Android et iOS. Si tu as un ordinateur, c'est un bonus — pas une nécessité.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Comment je reçois le guide après l'achat ?</div>
+        <div class="faq-a">Immédiatement après paiement, tu reçois un lien de téléchargement par WhatsApp ou par email. Le guide est au format PDF, lisible sur n'importe quel téléphone. Les bonus sont inclus dans le même envoi.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">La garantie 30 jours est-elle vraiment réelle ?</div>
+        <div class="faq-a">Oui, sans condition. Si tu as appliqué les méthodes sérieusement pendant 30 jours et que tu n'as généré aucun revenu, nous te remboursons intégralement. Pas de tracasseries, pas de questions pièges. Cette garantie existe parce que nous sommes confiants dans la qualité du guide.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Ça marche dans quel pays ?</div>
+        <div class="faq-a">Le guide est adapté à toute l'Afrique francophone : Sénégal, Côte d'Ivoire, Cameroun, Mali, Burkina Faso, Guinée, RDC, Togo, Bénin, Niger, Gabon, Congo, et plus. Certaines méthodes (freelance, affiliation) fonctionnent aussi depuis n'importe quel pays avec une connexion internet.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">7 500 FCFA, c'est vraiment le prix final ?</div>
+        <div class="faq-a">C'est le prix de lancement, disponible pour un temps limité. Le prix officiel sera 25 000 FCFA pour le guide seul, sans les bonus. À ce tarif, tu reçois le pack complet (guide + 4 bonus) pour moins qu'un repas au restaurant. C'est volontairement accessible pour permettre au maximum de personnes d'en bénéficier.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2 class="final-cta-title">
+      Il n'y a pas de meilleur moment<br>
+      <span style="color: var(--gold)">que maintenant.</span>
+    </h2>
+    <p class="final-cta-sub">Dans 30 jours, tu seras soit dans la même situation qu'aujourd'hui — soit en train de générer tes premiers revenus depuis ton téléphone. La différence ? Cette décision.</p>
+
+    <div class="countdown">
+      <div class="cd-block">
+        <span class="cd-num" id="cd-h">23</span>
+        <div class="cd-label">Heures</div>
+      </div>
+      <div class="cd-block" style="display:flex;align-items:center;padding-bottom:20px">
+        <span style="font-family:'Bebas Neue';font-size:40px;color:var(--gold);opacity:0.5">:</span>
+      </div>
+      <div class="cd-block">
+        <span class="cd-num" id="cd-m">47</span>
+        <div class="cd-label">Minutes</div>
+      </div>
+      <div class="cd-block" style="display:flex;align-items:center;padding-bottom:20px">
+        <span style="font-family:'Bebas Neue';font-size:40px;color:var(--gold);opacity:0.5">:</span>
+      </div>
+      <div class="cd-block">
+        <span class="cd-num" id="cd-s">12</span>
+        <div class="cd-label">Secondes</div>
+      </div>
+    </div>
+
+    <a href="#" class="cta-btn" style="max-width:560px" onclick="return false">
+      🚀 Je prends le pack complet — 7 500 FCFA seulement
+    </a>
+    <div class="cta-secondary" style="margin-top:16px">
+      ✅ Accès immédiat · 🛡️ Garanti 30 jours · 📱 100% sur téléphone · 🔒 Paiement sécurisé
+    </div>
+  </div>
+</section>
+
+<script>
+  // ── REVEAL ON SCROLL ──
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // ── FAQ TOGGLE ──
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // ── COUNTDOWN ──
+  let totalSeconds = 23 * 3600 + 47 * 60 + 12;
+
+  function updateCountdown() {
+    const h = Math.floor(totalSeconds / 3600);
+    const m = Math.floor((totalSeconds % 3600) / 60);
+    const s = totalSeconds % 60;
+
+    const fmt = n => String(n).padStart(2, '0');
+
+    ['cd-h', 'cd-m', 'cd-s'].forEach((id, i) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = fmt([h, m, s][i]);
+    });
+
+    const bar = document.getElementById('bar-timer');
+    if (bar) bar.textContent = `${fmt(h)}:${fmt(m)}:${fmt(s)}`;
+
+    if (totalSeconds > 0) totalSeconds--;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>
